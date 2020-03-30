@@ -1,0 +1,48 @@
+# Set up hosts serving archon.cloud website.
+#
+- hosts: website
+  remote_user: root
+  tasks:
+    - name: Add devops
+      user:
+        state: present
+        system: true
+        name: devops
+        groups:
+          - docker
+        uid: 999
+        shell: /bin/bash
+    - name: Add javier
+      user:
+        state: present
+        name: javier
+        groups:
+          - sudo
+          - docker
+        uid: 1000
+        password: "$6$x30LOqD5W6gpJFzV$mJ2JXSnsChHdxt2FmUwsjoMayUsTdohhtNp1e4YKqHt3MBCn2TZ8jXmjoZP4plZzkl7Zx22zU6rVT6R6/4oJx/"
+        update_password: on_create
+        expires: -1
+        shell: /bin/bash
+    - name: Set javier key
+      authorized_key:
+        user: javier
+        state: present
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFjJ+GaaqGMon5pZaUoG2O68ygzPGEmkavwCxC9IH32HmbhO3Zz7XZB+HJlT81iikjLX1z99rd74rJsZFOqYN7WeMpeZpY+Jk1qIJ8hpMBi+117ii3xfKSV5tI1z32I/0qbrjnXMJDQCbuYYJx1PIlvBe7aVKhPvyOa/1hmbA9rxMZU8MbaF1GNLfUcZFNvy/Em95P96Aa7TiGzbepx6TuSqiwZEeQGQEdpUqD52gZ0aoEgnaoNbpExpGXii1EQ+GRY8HAYE/dsmkCFl3oN8erbjt4X8ogGHihR7BfPhDvChAhyTiwmqzrmqh9OUEYL5xTp7b5PENLzelkwOBuguu/ devopsarchoncloud"
+    - name: Add samsuh
+      user:
+        state: present
+        name: samsuh
+        groups:
+          - sudo
+          - docker
+        uid: 1001
+        password: "$6$Icmy1qTTX8TuCz7n$EtiXMsXsVzXdn9HK4TADMvTL38xvBOxQz7qGQmUHPq9WxtDWs1BaLizjkEH8WjzrH7Aky8NbxqhA1M6Z4WZnd0"
+        update_password: on_create
+        expires: -1
+        shell: /bin/bash
+    - name: Set samsuh key
+      authorized_key:
+        user: samsuh
+        state: present
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFjJ+GaaqGMon5pZaUoG2O68ygzPGEmkavwCxC9IH32HmbhO3Zz7XZB+HJlT81iikjLX1z99rd74rJsZFOqYN7WeMpeZpY+Jk1qIJ8hpMBi+117ii3xfKSV5tI1z32I/0qbrjnXMJDQCbuYYJx1PIlvBe7aVKhPvyOa/1hmbA9rxMZU8MbaF1GNLfUcZFNvy/Em95P96Aa7TiGzbepx6TuSqiwZEeQGQEdpUqD52gZ0aoEgnaoNbpExpGXii1EQ+GRY8HAYE/dsmkCFl3oN8erbjt4X8ogGHihR7BfPhDvChAhyTiwmqzrmqh9OUEYL5xTp7b5PENLzelkwOBuguu/ devopsarchoncloud"

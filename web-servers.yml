@@ -20,7 +20,7 @@
           - sudo
           - docker
         uid: 1000
-        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
+        password: "$6$ywvxJYQ7skaYvaTS$gXj2RJYal7uLij0J7zZDF6PjEvpWlSd0VayVKjcBU7J39cQToKlLoQQhtkQXtdJegbl3qMhYyHxAHu52gjrXd1"
         update_password: on_create
         expires: -1
         shell: /bin/bash
@@ -37,7 +37,7 @@
           - sudo
           - docker
         uid: 1001
-        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
+        password: "$6$ywvxJYQ7skaYvaTS$gXj2RJYal7uLij0J7zZDF6PjEvpWlSd0VayVKjcBU7J39cQToKlLoQQhtkQXtdJegbl3qMhYyHxAHu52gjrXd1"
         update_password: on_create
         expires: -1
         shell: /bin/bash
@@ -54,7 +54,7 @@
           - sudo
           - docker
         uid: 1002
-        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
+        password: "$6$ywvxJYQ7skaYvaTS$gXj2RJYal7uLij0J7zZDF6PjEvpWlSd0VayVKjcBU7J39cQToKlLoQQhtkQXtdJegbl3qMhYyHxAHu52gjrXd1"
         update_password: on_create
         expires: -1
         shell: /bin/bash
@@ -71,7 +71,7 @@
           - sudo
           - docker
         uid: 1003
-        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
+        password: "$6$ywvxJYQ7skaYvaTS$gXj2RJYal7uLij0J7zZDF6PjEvpWlSd0VayVKjcBU7J39cQToKlLoQQhtkQXtdJegbl3qMhYyHxAHu52gjrXd1"
         update_password: on_create
         expires: -1
         shell: /bin/false # disabled for now

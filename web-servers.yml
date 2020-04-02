@@ -20,7 +20,7 @@
           - sudo
           - docker
         uid: 1000
-        password: "$6$jQcZfMXgyK.Xmxq3$/mUEeDHzAXHxEaJLmSzQ2YoVPZuWt1iNoE7B2GnVgjEiNqLMy7v3S0NhBvu7JVjt7CX.XQ1PLZ6n8QlBW.B9d/"
+        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
         update_password: on_create
         expires: -1
         shell: /bin/bash
@@ -37,12 +37,46 @@
           - sudo
           - docker
         uid: 1001
-        password: "$6$Wohfgx4UTdwX4zWb$tNF99g/Cfd1FKt/bnMo2zAGnr4jajEWUNVHssc5EueR3JAhebLonqD7cbxBtyoNvfU2ra.95UejcTPPSX/f3G0"
+        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
         update_password: on_create
         expires: -1
         shell: /bin/bash
     - name: Set samsuh key
       authorized_key:
         user: samsuh
+        state: present
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFjJ+GaaqGMon5pZaUoG2O68ygzPGEmkavwCxC9IH32HmbhO3Zz7XZB+HJlT81iikjLX1z99rd74rJsZFOqYN7WeMpeZpY+Jk1qIJ8hpMBi+117ii3xfKSV5tI1z32I/0qbrjnXMJDQCbuYYJx1PIlvBe7aVKhPvyOa/1hmbA9rxMZU8MbaF1GNLfUcZFNvy/Em95P96Aa7TiGzbepx6TuSqiwZEeQGQEdpUqD52gZ0aoEgnaoNbpExpGXii1EQ+GRY8HAYE/dsmkCFl3oN8erbjt4X8ogGHihR7BfPhDvChAhyTiwmqzrmqh9OUEYL5xTp7b5PENLzelkwOBuguu/ devopsarchoncloud"
+    - name: Add kevin
+      user:
+        state: present
+        name: kevin
+        groups:
+          - sudo
+          - docker
+        uid: 1002
+        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
+        update_password: on_create
+        expires: -1
+        shell: /bin/bash
+    - name: Set kevin key
+      authorized_key:
+        user: kevin
+        state: present
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFjJ+GaaqGMon5pZaUoG2O68ygzPGEmkavwCxC9IH32HmbhO3Zz7XZB+HJlT81iikjLX1z99rd74rJsZFOqYN7WeMpeZpY+Jk1qIJ8hpMBi+117ii3xfKSV5tI1z32I/0qbrjnXMJDQCbuYYJx1PIlvBe7aVKhPvyOa/1hmbA9rxMZU8MbaF1GNLfUcZFNvy/Em95P96Aa7TiGzbepx6TuSqiwZEeQGQEdpUqD52gZ0aoEgnaoNbpExpGXii1EQ+GRY8HAYE/dsmkCFl3oN8erbjt4X8ogGHihR7BfPhDvChAhyTiwmqzrmqh9OUEYL5xTp7b5PENLzelkwOBuguu/ devopsarchoncloud"
+    - name: Add marius
+      user:
+        state: present
+        name: marius
+        groups:
+          - sudo
+          - docker
+        uid: 1003
+        password: "$6$s9YD9zhloRtOkMVL$JGUGlPgDD1AMnrKFrq3ah0DDYK2IBr0BLAJH69TpKpicXpwKjHIRjUnB4mJnmbA1IB1wtTK65bFY5KnqRWtGF1"
+        update_password: on_create
+        expires: -1
+        shell: /bin/false # disabled for now
+    - name: Set marius key
+      authorized_key:
+        user: marius
         state: present
         key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFjJ+GaaqGMon5pZaUoG2O68ygzPGEmkavwCxC9IH32HmbhO3Zz7XZB+HJlT81iikjLX1z99rd74rJsZFOqYN7WeMpeZpY+Jk1qIJ8hpMBi+117ii3xfKSV5tI1z32I/0qbrjnXMJDQCbuYYJx1PIlvBe7aVKhPvyOa/1hmbA9rxMZU8MbaF1GNLfUcZFNvy/Em95P96Aa7TiGzbepx6TuSqiwZEeQGQEdpUqD52gZ0aoEgnaoNbpExpGXii1EQ+GRY8HAYE/dsmkCFl3oN8erbjt4X8ogGHihR7BfPhDvChAhyTiwmqzrmqh9OUEYL5xTp7b5PENLzelkwOBuguu/ devopsarchoncloud"
